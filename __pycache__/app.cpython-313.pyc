@@ -1,0 +1,397 @@
+ó
+    '”£j=I  ã                   óÈ  • S SK JrJrJrJrJrJr  S SK rS SK	J
+r
+  \" \
+5      rS\l
+        S r\R                  S5      S  5       r\R                  S5      S	 5       r\R                  S
+5      S
+ 5       r\R                  S5      \R                  S
+5      S 5       5       r\R                  S5      S 5       r\R                  S5      S 5       r\R                  SSS/S9S 5       r\R                  SSS/S9S 5       r\R                  S5      S 5       r\R                  SSS/S9S 5       r\R                  S5      S 5       r\R                  S SS/S9S! 5       r\R                  S"5      S# 5       r\R                  S$SS/S9S% 5       r\R                  S&5      S' 5       r\R                  S(5      S) 5       r\RA                  S*5      S+ 5       r!\
+S,:X  a  \RE                  S-S.9  gg)/é    )ÚFlaskÚrender_templateÚ requestÚredirectÚ url_forÚ sessionN)Úcheck_password_hashzvidyasathi-secret-key-2026c                  óD   • [         R                  R                  SSSSSS9$ ) NÚ	localhostiê  ÚrootzVidyasathiNew@2026Ú
+vidyasathi_db)ÚhostÚportÚuserÚpasswordÚdatabase)ÚmysqlÚ	connectorÚ connect© ó    Úapp.pyÚget_db_connectionr   
+   s-   € Ü
+?‰?×
+"Ñ
+"Ø
+Ø
+Ø
+Ø%Ø ð
+ #ð ð r   Ú/c                   óf  • [        5       n U R                  5       nUR                  S5        UR                   5       S   nUR                  S5        UR                   5       S   nUR                  S5        UR                   5       S   nUR	                  5         U R	                  5         [
+        SUUUS9$ ) Nú!SELECT COUNT(*) FROM scholarshipsr   ú'SELECT COUNT(*) FROM government_schemesúSELECT COUNT(*) FROM updatesz	home.html©Úscholarship_countÚscheme_countÚupdate_count)r   ÚcursorÚ executeÚfetchoneÚcloser   ©Úconnr#   r    r!   r"   s        r   Úhomer)      s›   € ä
+Ó
+€DØ
+[‰[‹]€Fà
+‡NNÐ6Ô7ØŸ™Ó)¨!Ñ,Ðà
+‡NNÐ<Ô=Ø—?‘?Ó$ QÑ'€Là
+‡NNÐ1Ô2Ø—?‘?Ó$ QÑ'€Là
+‡LL„NØ‡JJ„Lä
+ØØ+Ø!Ø!ñ	ð r   z/aboutc                  ó   • [        S5      $ )Nz
+about.html©r   r   r   r   Úaboutr,   8   s
+   € ä
+˜<Ó
+(Ð(r   z
+/scholarshipsc            	      ó˜  • [         R                  R                  SS5      R                   5       n [	        5       nUR
+                  SS9nU (       a  SU -   S-   nUR
+                  SX3X345        OUR
+                  S 5        UR                  5       nUR                  5         UR                  5         U H‹  nUR                  SS5      US	'   S
+US
+'   UR                  SS5      US'   UR                  S
+S5      US
+'   UR                  SS5      US'   UR                  SS5      US'   UR                  SS5      US'   SUS'   M  
+   [        SSSUSU S9$ )NÚqÚ T©Ú
+dictionaryÚ%zë
+            SELECT *
+            FROM scholarships
+            WHERE name LIKE %s
+               OR category LIKE %s
+               OR description LIKE %s
+               OR eligibility LIKE %s
+            ORDER BY id DESC
+            z]
+            SELECT *
+            FROM scholarships
+            ORDER BY id DESC
+            ÚnameÚtitleúSee official detailsÚamountÚ
+descriptionÚ
+eligibilityÚcategoryÚdeadlineÚ
+official_linkú%Check official scholarship guidelinesÚ	documentsú	list.htmlÚScholarshipszQExplore scholarship opportunities, benefits, eligibility and important deadlines.Ú
+scholarship©Ú
+page_titleÚ
+page_subtitleÚitemsÚkindÚquery©
+r   ÚargsÚgetÚstripr   r#   r$   Úfetchallr&   r   ©rF   r(   r#   ÚsearchrD   Úitems         r   ÚscholarshipsrO   A   sS  € äL‰L×Ñ˜S "Ó%×+Ñ+Ó-€Eä
+Ó
+€DØ
+[‰[ Dˆ[Ð
+)€Fæ Øu‘˜sÑ"ˆà‰ð
+ð ˜VÐ,õ
+	
+ð 	‰ð
+ô	
+ð 
+O‰OÓ€Eà
+‡LL„NØ‡JJ„LãˆØŸ™ ¨Ó,ˆˆW‰
+Ø/ˆˆX‰Ø"Ÿh™h }°bÓ9ˆˆ]ÑØ"Ÿh™h }°bÓ9ˆˆ]ÑØŸ8™8 J°Ó3ˆˆZÑØŸ8™8 J°Ó3ˆˆZÑØ $§¡¨¸"Ó =ˆˆ_ÑØCˆˆ[Óñ ô ØØ!ØiØØ
+Øñ
+ ð  r   z/schemesz/government-schemesc            	      ó¢  • [         R                  R                  SS5      R                   5       n [	        5       nUR
+                  SS9nU (       a  SU -   S-   nUR
+                  SX3X345        OUR
+                  S 5        UR                  5       nUR                  5         UR                  5         U H  nUR                  SS5      US	'   UR                  S
+S5      US
+'   UR                  S
+S5      US
+'   UR                  SS5      US'   UR                  S
+S5      US
+'   SUS'   SUS'   UR                  SS5      US'   SUS'   M’  
+   [        SSSUSU S9$ )Nr.   r/   Tr0   r2   zñ
+            SELECT *
+            FROM government_schemes
+            WHERE name LIKE %s
+               OR category LIKE %s
+               OR description LIKE %s
+               OR eligibility LIKE %s
+            ORDER BY id DESC
+            zc
+            SELECT *
+            FROM government_schemes
+            ORDER BY id DESC
+            r3   r4   r7   r8   r9   r:   r5   r6   úSee official scheme guidelinesÚbenefitsr;   ú Check official scheme guidelinesr=   r>   zGovernment SchemeszLExplore government schemes, benefits, eligibility and important information.ÚschemerA   rG   rL   s         r   Ú schemesrU   }   s_  € ô 
+L‰L×Ñ˜S "Ó%×+Ñ+Ó-€Eä
+Ó
+€DØ
+[‰[ Dˆ[Ð
+)€Fæ Øu‘˜sÑ"ˆà‰ð
+ð ˜VÐ,õ
+	
+ð 	‰ð
+ô	
+ð 
+O‰OÓ€Eà
+‡LL„NØ‡JJ„LãˆØŸ™ ¨Ó,ˆˆW‰
+Ø"Ÿh™h }°bÓ9ˆˆ]ÑØ"Ÿh™h }°bÓ9ˆˆ]ÑØŸ8™8 J°Ó3ˆˆZÑØŸ8™8 J°Ó3ˆˆZÑØ/ˆˆX‰Ø;ˆˆZÑØ $§¡¨¸"Ó =ˆˆ_ÑØ>ˆˆ[Óñ ô ØØ'ØdØØ
+Øñ
+ ð  r   z/details/<int:item_id>c                 ó.  • [         R                  R                  SS5      n[         5       nUR	                  SS9nUS:X  aO  UR
+                  SU 45        UR
+                  5       nU(       a$  UR                  S S5      US	'   S
+US
+'   SUS
+'   SUS'   OIUR
+                  SU 45        UR
+                  5       nU(       a  UR                  S S5      US	'   S
+US
+'   SUS'   UR                  5         UR                  5         U(       d
+  [        S5      S4$ [        SUUS9$ )NrE   r@   Tr0   rT   z`
+            SELECT *
+            FROM government_schemes
+            WHERE id = %s
+            r3   r/   r4   r5   r6   rQ   rR   rS   r=   zZ
+            SELECT *
+            FROM scholarships
+            WHERE id = %s
+            r<   ú404.htmlé”  zdetails.html)rN   rE   )	r   rH   rI   r   r#   r$   r%   r&   r   )Ú item_idrE   r(   r#   rN   s        r   Ú detailsrZ   »   s   € ä
+<‰<×
+Ñ
+˜F MÓ
+2€Dä
+Ó
+€DØ
+[‰[ Dˆ[Ð
+)€Fà 
+ˆxÓ Ø‰ð
+ð
+ ˆJô
+ 	
+ð ‰Ó ˆæ
+Ø ŸH™H V¨RÓ0ˆD‰MØ3ˆD‰NØ?ˆDÑØ BˆDÑøð 	‰ð
+ð
+ ˆJô
+ 	
+ð ‰Ó ˆæ
+Ø ŸH™H V¨RÓ0ˆD‰MØ3ˆD‰NØ GˆDÑà
+‡LL„NØ‡JJ„Læ
+Ü˜zÓ*¨CÐ/Ð/ä
+ØØ
+Ø
+ñ ð r   z/updatesc                  ó  • [        5       n U R                  SS9nUR                  S5        UR                   5       nUR	                  5         U R	                  5         U H  nUR
+                  SS5      US'   M  
+   [
+        S UUS9$ )	NTr0   úZ
+        SELECT *
+        FROM updates
+        ORDER BY update_date DESC, id DESC
+        Ú
+update_dater/   Údatezupdates.html)rD   Ú updates) r   r#   r$   rK   r&   rI   r   )r(   r#   rD   rN   s       r   r_   r_   ö   s   € ä
+Ó
+€DØ
+[‰[ Dˆ[Ð
+)€Fà
+‡NNð	ôð 
+O‰OÓ€Eà
+‡LL„NØ‡JJ„LãˆØ—x‘x 
+¨rÓ2ˆˆV‹ñ ô ØØØñ ð r   z/eligibilityÚGETÚPOST)Ú methodsc            
+      óx  • / n SnSnSnSnSn[         R                  S:X  aô  [         R                  R                   SS5      n[         R                  R                   SS5      n[         R                  R                   SS5      n[         R                  R                   SS5      n [	        U5      n[        5       n U R                  SS	9nUR                  S
+XF45        UR                  5       n UR                  5         U R                  5         U (       a  S
+nOSn[        S
+U UUUUUS9 $ ! [
+        [        4  a    S n N‹f = f)Nr/   ra   ÚclassÚgenderr9   Ú
+annual_incomer   Tr0   aK  
+            SELECT *
+            FROM scholarships
+            WHERE (category = %s OR category = 'General')
+              AND (
+                    annual_income_limit IS NULL
+                    OR annual_income_limit = 0
+                    OR annual_income_limit >= %s
+              )
+            ORDER BY id DESC
+            zJGreat! We found scholarship opportunities that may match your information.z@No matching scholarships were found for the information entered.zeligibility.html)Ú resultsÚ messageÚ
+student_classre   r9   rf   )
+r   ÚmethodÚformrI   ÚfloatÚ
+ValueErrorÚ	TypeErrorr   r#   r$   rK   r&   r   )	rg   rh   ri   re   r9   rf   Úincomer(   r#   s	            r   r8   r8     s=  € à€GØ€GØ€MØ
+€FØ€HØ€Mä ‡~~˜Ó ÜŸ™×(Ñ(¨°"Ó5ˆ
+Ü—‘×!Ñ! (¨BÓ/ˆÜ—<‘<×#Ñ# J°Ó3ˆÜŸ™×(Ñ(¨¸"Ó=ˆ
+ð	Ü˜=Ó)ˆFô !Ó"ˆØ—‘¨Ð-ˆà‰ð
+
+ð Ðô
+	
+ð —/‘/Ó#ˆ à‰ŒØ
+‰
+Œæ
+ð3ñ 
+ð/ð 
+ô
+ ØØØØ#ØØØ#ñð øôK œIÐ&ó 	ØŠFð	ús   Â"
+D$ Ä$D9Ä8D9z/adminc                  ó*  • [         R                  S:X  aõ  [         R                  R                   SS5      R	                  5       n [         R                  R                   SS5      n[
+        5       nUR
+                  SS9nUR                  S U 45        UR                  5       nUR                  5         UR                  5         U(       a:  [        US   U5      (       a&  S[        S'   U [        S	'   [        [        S
+5      5      $ [        S
+SS
+9$ [        S
+5      $ )Nra   Úusernamer/   r   Tr0   z'SELECT * FROM admin WHERE username = %sÚadmin_logged_inÚadmin_usernameÚadmin_dashboardzadmin_login.htmlzInvalid username or password.©Úerror)r   rj   rk   rI   rJ   r   r#   r$   r%   r&   r	   r   r   r    r   )rq   r   r(   r#   Ú
+admin_users        r   Úadminrx   [  sô   € ä ‡~~˜Ó Ü—<‘<×#Ñ# J°Ó3×9Ñ9Ó;ˆÜ—<‘<×#Ñ# J°Ó3ˆä Ó"ˆØ—‘¨Ð-ˆà‰Ø5Ø
+ˆKô	
+ð
+ —_‘_Ó&ˆ
+à‰ŒØ
+‰
+Œæ
+Ô-ØzÑ"Ø÷
+ñ 
+ð *.ŒGÐ%Ñ&Ø(0ŒGÐ$Ñ%äœGÐ$5Ó6Ó7Ð7äØØ1ñ
+ð 	
+ô
+ Ð-Ó
+.Ð.r   z/admin/dashboardc                   óÄ  • [         R                  " S5      (       d  [        [         S5      5      $ [	        5       n U R
+                  5       nUR
+                  S5        UR                  5       S   nUR
+                  S5        UR                  5       S   nUR
+                  S5        UR                  5       S   nUR                  5         U R                  5         [        S UUUS9$ )	Nrr   rx   r   r   r   r   z
+admin.htmlr   )
+r   rI   r   r    r   r#   r$   r%   r&   r   r'   s        r   rt   rt   ƒ  s»   € ä
+;Š;Ð(×
+)Ñ
+)Üœ   Ó(Ó)Ð)ä
+Ó
+€DØ
+[‰[‹]€Fà
+‡NNÐ6Ô7ØŸ™Ó)¨!Ñ,Ðà
+‡NNÐ<Ô=Ø—?‘?Ó$ QÑ'€Là
+‡NNÐ1Ô2Ø—?‘?Ó$ QÑ'€Là
+‡LL„NØ‡JJ„Lä
+ØØ+Ø!Ø!ñ	ð r   z/admin/scholarshipsc            
+      óx  • [         R                  " S5      (       d  [        [         S5      5      $ [	        5       n U R
+                  SS9n[        R                  S:X  Ga“  [        R                  R                  SS 5      R                  5       n[        R                  R                  SS 5      R                  5       n[        R                  R                  S	S 5      R                  5       n[        R                  R                  S
+S 5      R                  5       n[        R                  R                  S
+5      =(       d    S n[        R                  R                  S5      =(       d    S n [        R                  R                  S
+S 5      R                  5       nUR                  SUUUUUU U4 5        U R                  5         UR                  5         U R                  5         [        [         S5      5      $ UR                  S5        UR                  5       n	UR                  5         U R                  5         [        SU	S9$ )Nrr   rx   Tr0   ra   r3   r/   r7   r8   r9   Úannual_income_limitr:   r;   zÔ
+            INSERT INTO scholarships
+            (name, description, eligibility, category,
+             annual_income_limit, deadline, official_link)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            Úmanage_scholarshipsz+SELECT * FROM scholarships ORDER BY id DESCzmanage_scholarships.html)rO   ©r   rI   r   r    r   r#   r   rj   rk   rJ   r$   Úcommitr&   rK   r   )
+r(   r#   r3   r7   Úeligibility_textr9   r{   r:   r;   Úscholarship_lists
+             r   r|   r|   £  s´  € ä
+;Š;Ð(×
+)Ñ
+)Üœ   Ó(Ó)Ð)ä
+Ó
+€DØ
+[‰[ Dˆ[Ð
+)€Fä ‡~~˜Ô Ü|‰|×Ñ ¨Ó+×1Ñ1Ó3ˆÜ—l‘l×&Ñ& }°bÓ9×?Ñ?ÓAˆ
+Ü"Ÿ<™<×+Ñ+¨M¸2Ó>×DÑDÓFÐÜ—<‘<×#Ñ# J°Ó3×9Ñ9Ó;ˆÜ%Ÿl™l×.Ñ.Ð/DÓE×MÈÐÜ—<‘<×#Ñ# JÓ/×7°4ˆÜŸ™×(Ñ(¨¸"Ó=×CÑCÓEˆ
+à‰ð
+ð ØØ ØØ#ØØð
+ô	
+ð$ 	
+
+‰
+Œ
+à‰ŒØ
+‰
+Œäœ Ð 5Ó6Ó7Ð7à
+‡NNØ5ôð —‘Ó(Ðà
+‡LL„NØ‡JJ„Lä
+Ø"Ø%ñð r   z//admin/scholarships/delete/<int:scholarship_id>c                 óB  • [         R                  " S5      (       d  [        [         S5      5      $ [	        5       nUR
+                  5       nUR
+                  SU 45        UR                  5         UR                  5         UR                  5         [        [         S5      5      $ )Nrr   rx   z&DELETE FROM scholarships WHERE id = %sr|   ©	r   rI   r   r    r   r#   r$   r~   r&   )Úscholarship_idr(   r#   s      r   Údelete_scholarshipr„   à  sx   € ä
+;Š;Ð(×
+)Ñ
+)Üœ   Ó(Ó)Ð)ä
+Ó
+€DØ
+[‰[‹]€Fà
+‡NNØ0Ø	Ðôð
+ 	‡KK„Mà
+‡LL„NØ‡JJ„Lä
+”GÐ1Ó2Ó
+3Ð3r   z/admin/schemesc            
+      óx  • [         R                  " S5      (       d  [        [         S5      5      $ [	        5       n U R
+                  SS9n[        R                  S:X  Ga“  [        R                  R                  SS 5      R                  5       n[        R                  R                  SS 5      R                  5       n[        R                  R                  S	S 5      R                  5       n[        R                  R                  S
+S 5      R                  5       n[        R                  R                  S
+5      =(       d    S n[        R                  R                  S5      =(       d    S n [        R                  R                  S
+S 5      R                  5       nUR                  SUUUUUU U4 5        U R                  5         UR                  5         U R                  5         [        [         S5      5      $ UR                  S5        UR                  5       n	UR                  5         U R                  5         [        SU	S9$ )Nrr   rx   Tr0   ra   r3   r/   r7   r8   r9   r{   r:   r;   zÚ
+            INSERT INTO government_schemes
+            (name, description, eligibility, category,
+             annual_income_limit, deadline, official_link)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            Úmanage_schemesz1SELECT * FROM government_schemes ORDER BY id DESCzmanage_schemes.html)rU   r}   )
+r(   r#   r3   r7   r   r9   r{   r:   r;   Úschemes_lists
+             r   r†   r†   ù  s³  € ä
+;Š;Ð(×
+)Ñ
+)Üœ   Ó(Ó)Ð)ä
+Ó
+€DØ
+[‰[ Dˆ[Ð
+)€Fä ‡~~˜Ô Ü|‰|×Ñ ¨Ó+×1Ñ1Ó3ˆÜ—l‘l×&Ñ& }°bÓ9×?Ñ?ÓAˆ
+Ü"Ÿ<™<×+Ñ+¨M¸2Ó>×DÑDÓFÐÜ—<‘<×#Ñ# J°Ó3×9Ñ9Ó;ˆÜ%Ÿl™l×.Ñ.Ð/DÓE×MÈÐÜ—<‘<×#Ñ# JÓ/×7°4ˆÜŸ™×(Ñ(¨¸"Ó=×CÑCÓEˆ
+à‰ð
+ð ØØ ØØ#ØØð
+ô	
+ð$ 	
+
+‰
+Œ
+à‰ŒØ
+‰
+Œäœ Ð 0Ó1Ó2Ð2à
+‡NNØ;ôð —?‘?Ó$€Là
+‡LL„NØ‡JJ„Lä
+ØØñð r   z%/admin/schemes/delete/<int:scheme_id>c                 óB  • [         R                  " S5      (       d  [        [         S5      5      $ [	        5       nUR
+                  5       nUR
+                  SU 45        UR                  5         UR                  5         UR                  5         [        [         S5      5      $ )Nrr   rx   z,DELETE FROM government_schemes WHERE id = %sr†   r‚   )Ú	scheme_idr(   r#   s      r   Ú
+delete_schemerŠ   6  sw   € ä
+;Š;Ð(×
+)Ñ
+)Üœ   Ó(Ó)Ð)ä
+Ó
+€DØ
+[‰[‹]€Fà
+‡NNØ6Ø	ˆôð
+ 	‡KK„Mà
+‡LL„NØ‡JJ„Lä
+”GÐ,Ó-Ó
+.Ð.r   z/admin/updatesc                   óf  • [         R                  " S5      (       d  [        [         S5      5      $ [	        5       n U R
+                  SS9n[        R                  S:X  Ga
+  [        R                  R                  SS 5      R                  5       n[        R                  R                  SS 5      R                  5       n[        R                  R                  S	5      =(       d    S n[        R                  R                  S
+S 5      R                  5       nUR                  S
+X#XE45        U R                  5         UR                  5         U R                  5         [        [         S5      5      $ UR                  S
+5        UR                  5       nUR                  5         U R                  5         [        SUS9$ )Nrr   rx   Tr0   ra   r4   r/   r7   r]   Úlinkz…
+            INSERT INTO updates
+            (title, description, update_date, link)
+            VALUES (%s, %s, %s, %s)
+            Úmanage_updatesr\   zmanage_updates.html)r_   r}   ) r(   r#   r4   r7   r]   rŒ   Úupdates_lists           r   r   r   O  sI  € ä
+;Š;Ð(×
+)Ñ
+)Üœ   Ó(Ó)Ð)ä
+Ó
+€DØ
+[‰[ Dˆ[Ð
+)€Fä ‡~~˜Ô Ü—‘× Ñ  ¨"Ó-×3Ñ3Ó5ˆÜ—l‘l×&Ñ& }°bÓ9×?Ñ?ÓAˆ
+Ü—l‘l×&Ñ& }Ó5×=¸ˆ
+Ü|‰|×Ñ ¨Ó+×1Ñ1Ó3ˆà‰ð
+ð
+  Ð3ô
+ 	
+ð 	
+
+‰
+Œ
+à‰ŒØ
+‰
+Œäœ Ð 0Ó1Ó2Ð2à
+‡NNð	ôð —?‘?Ó$€Là
+‡LL„NØ‡JJ„Lä
+ØØñð r   z%/admin/updates/delete/<int:update_id>c                 óB  • [         R                  " S5      (       d  [        [         S5      5      $ [	        5       nUR
+                  5       nUR
+                  SU 45        UR                  5         UR                  5         UR                  5         [        [         S5      5      $ )Nrr   rx   z!DELETE FROM updates WHERE id = %sr   r‚   )Ú	update_idr(   r#   s      r   Ú
+delete_updater‘   „  sw   € ä
+;Š;Ð(×
+)Ñ
+)Üœ   Ó(Ó)Ð)ä
+Ó
+€DØ
+[‰[‹]€Fà
+‡NNØ+Ø	ˆôð
+ 	‡KK„Mà
+‡LL„NØ‡JJ„Lä
+”GÐ,Ó-Ó
+.Ð.r   z
+/admin/logoutc                  ó†   • [         R                  " SS 5        [         R                  " SS 5        [        [         S5      5      $ )Nrr   rs   rx   )r   Úpopr   r    r   r   r   Úadmin_logoutr”     s0   € ä
+‡K‚KÐ! 4Ô(Ü
+‡K‚KÐ  $Ô'ä
+”G˜GÓ$Ó
+%Ð%r   rX   c                 ó   • [        S5      S4$ )NrW   rX   r+   ru   s    r   Úpage_not_foundr–   ©  s   € ä
+˜:Ó
+&¨Ð
++Ð+r   Ú__main__T)Údebug)#Úflaskr   r   r   r   r    r   Úmysql.connectorr   Úwerkzeug.securityr	   Ú__name__ÚappÚ
+secret_keyr   Úrouter)   r,   rO   rU   rZ   r_   r8   rx   rt   r|   r„   r†   rŠ   r   r‘   r”   Úerrorhandlerr–   Úrunr   r   r   Ú<module>r¢      s{  ðß M× MÛ Ý 1á
+ˆHƒo€Ø-€„ò ð ‡ˆ3ƒñó ðð8 ‡ˆ8Óñ)ó ð)ð ‡ˆ?Óñ4ó ð4ðv ‡ˆ:ÓØ‡Ð
+ Ó!ñ5ó "ó ð5ðx ‡Ð
+#Ó$ñ3ó %ð3ðt ‡ˆ:Óñó ðð> ‡ˆ> E¨6 ?€Ð3ñ=ó 4ð=ðH ‡ˆ8˜e V˜_€Ð-ñ /ó .ð /ðN ‡Ð
+Óñó ðð> ‡Ð
+ ¨5°&¨/€Ð:ñ5ó ;ð5ðx ‡Ð
+<Ó=ñ4ó >ð4ð0 ‡Ð
+ e¨V _€Ð5ñ5ó 6ð5ðx ‡Ð
+2Ó3ñ/ó 4ð/ð0 ‡Ð
+ e¨V _€Ð5ñ-ó 6ð-ðh ‡Ð
+2Ó3ñ/ó 4ð/ð0 ‡ˆ?Óñ&ó ð&ð ×Ñ#Óñ,ó ð,ð ˆzÓØ ‡GG$€GÒð r   
