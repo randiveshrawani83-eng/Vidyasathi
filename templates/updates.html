@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+Latest Updates - Vidyasathi
+{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="section-kicker">
+            STAY INFORMED
+        </span>
+
+        <h1>
+            Latest Updates
+        </h1>
+
+        <p>
+            Important announcements and helpful information
+            for students.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section-padding pt-4">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            {% for item in updates %}
+
+            <div class="col-md-6">
+
+                <div class="update-card">
+
+                    <div class="update-date">
+                        {{ item.date }}
+                    </div>
+
+                    <h3 class="mt-2">
+                        {{ item.title }}
+                    </h3>
+
+                    <p>
+                        {{ item.description }}
+                    </p>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

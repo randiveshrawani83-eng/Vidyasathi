@@ -1,0 +1,444 @@
+{% extends "base.html" %}
+
+{% block title %}
+Vidyasathi - Home
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <!-- LEFT -->
+
+            <div class="col-lg-7">
+
+                <span class="eyebrow">
+                    STUDENT WELFARE INFORMATION PORTAL
+                </span>
+
+
+                <h1 class="hero-title">
+
+                    Find the right
+
+                    <span>
+                        scholarship
+                    </span>
+
+                    or
+
+                    <span>
+                        government scheme
+                    </span>
+
+                    for you.
+
+                </h1>
+
+
+                <p class="hero-text">
+
+                    Vidyasathi brings scholarship and
+                    government scheme information together
+                    in one simple and student-friendly platform.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="{{ url_for('eligibility') }}"
+                       class="btn btn-gold btn-lg">
+
+                        Check Eligibility →
+
+                    </a>
+
+
+                    <a href="{{ url_for('scholarships') }}"
+                       class="btn btn-outline-light btn-lg">
+
+                        Explore Scholarships
+
+                    </a>
+
+                </div>
+
+
+                <div class="trust-row">
+
+                    <span>
+                        ✓ Eligibility guidance
+                    </span>
+
+                    <span>
+                        ✓ Important deadlines
+                    </span>
+
+                    <span>
+                        ✓ Official links
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="col-lg-5">
+
+                <div class="discovery-card">
+
+
+                    <div class="discovery-top">
+
+                        <small>
+                            QUICK DISCOVERY
+                        </small>
+
+                        <span>
+                            ✦
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        What are you looking for?
+                    </h3>
+
+
+                    <a href="{{ url_for('scholarships') }}"
+                       class="quick-item">
+
+                        <span class="quick-icon">
+                            🎓
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Scholarships
+                            </strong>
+
+                            <small>
+                                Financial support for education
+                            </small>
+
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="{{ url_for('schemes') }}"
+                       class="quick-item">
+
+                        <span class="quick-icon green">
+                            🏛️
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Government Schemes
+                            </strong>
+
+                            <small>
+                                Education & welfare opportunities
+                            </small>
+
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="{{ url_for('eligibility') }}"
+                       class="quick-item">
+
+                        <span class="quick-icon gold">
+                            ✓
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Check Eligibility
+                            </strong>
+
+                            <small>
+                                Find opportunities for your profile
+                            </small>
+
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center g-3">
+
+
+            <div class="col-md-4">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        {{ scholarship_count }}+
+                    </div>
+
+                    <div class="stat-label">
+                        Scholarships
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        {{ scheme_count }}+
+                    </div>
+
+                    <div class="stat-label">
+                        Government Schemes
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="stat-card">
+
+                    <div class="stat-number">
+                        {{ update_count }}+
+                    </div>
+
+                    <div class="stat-label">
+                        Latest Updates
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+
+        <div class="section-heading text-center">
+
+            <span class="section-kicker">
+                WHY VIDYASATHI?
+            </span>
+
+
+            <h2>
+                Everything you need to discover opportunities.
+            </h2>
+
+
+            <p>
+                Simple tools that help students move from
+                searching for information to finding
+                opportunities that may actually suit them.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-3">
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon blue">
+                        🔎
+                    </div>
+
+
+                    <h4>
+                        Easy Discovery
+                    </h4>
+
+
+                    <p>
+                        Search and explore scholarships and
+                        government schemes using organized
+                        information.
+                    </p>
+
+
+                    <a href="{{ url_for('scholarships') }}">
+                        Start exploring →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon gold">
+                        ✓
+                    </div>
+
+
+                    <h4>
+                        Eligibility Checker
+                    </h4>
+
+
+                    <p>
+                        Enter your class, gender, category
+                        and annual family income to discover
+                        matching opportunities.
+                    </p>
+
+
+                    <a href="{{ url_for('eligibility') }}">
+                        Check now →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon green">
+                        📅
+                    </div>
+
+
+                    <h4>
+                        Important Details
+                    </h4>
+
+
+                    <p>
+                        Find benefits, required documents,
+                        deadlines and other important
+                        information clearly.
+                    </p>
+
+
+                    <a href="{{ url_for('updates') }}">
+                        See updates →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box text-center">
+
+            <span class="section-kicker light">
+                DON'T KNOW WHERE TO START?
+            </span>
+
+
+            <h2>
+                Let Vidyasathi help you find relevant opportunities.
+            </h2>
+
+
+            <p>
+                Enter a few details and explore scholarships
+                and government schemes that may be suitable
+                for your profile.
+            </p>
+
+
+            <a href="{{ url_for('eligibility') }}"
+               class="btn btn-gold btn-lg">
+
+                Check Your Eligibility
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}

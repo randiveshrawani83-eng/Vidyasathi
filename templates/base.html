@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Vidyasathi
+        {% endblock %}
+    </title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- Our CSS -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+
+    <div class="container">
+
+
+        <!-- BRAND -->
+
+        <a class="navbar-brand"
+           href="{{ url_for('home') }}">
+
+            <span class="brand-icon">
+                V
+            </span>
+
+            <span>
+
+                <strong>
+                    Vidyasathi
+                </strong>
+
+                <small>
+                    Learn • Discover • Grow
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- MENU -->
+
+        <div class="collapse navbar-collapse"
+             id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       {% if request.path == '/' %}active{% endif %}"
+                       href="{{ url_for('home') }}">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       {% if request.path == '/about' %}active{% endif %}"
+                       href="{{ url_for('about') }}">
+
+                        About Us
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       {% if request.path.startswith('/scholarships') %}active{% endif %}"
+                       href="{{ url_for('scholarships') }}">
+
+                        Scholarships
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       {% if request.path.startswith('/schemes') %}active{% endif %}"
+                       href="{{ url_for('schemes') }}">
+
+                        Government Schemes
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       {% if request.path.startswith('/eligibility') %}active{% endif %}"
+                       href="{{ url_for('eligibility') }}">
+
+                        Eligibility Checker
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       {% if request.path.startswith('/updates') %}active{% endif %}"
+                       href="{{ url_for('updates') }}">
+
+                        Latest Updates
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= PAGE CONTENT ================= -->
+
+<main>
+
+    {% block content %}
+
+    {% endblock %}
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+    <div class="container py-5">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <h4>
+                    Vidyasathi
+                </h4>
+
+                <p>
+                    A centralized scholarship and government
+                    scheme information portal designed to make
+                    opportunities easier to discover.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h6>
+                    Explore
+                </h6>
+
+                <a href="{{ url_for('scholarships') }}">
+                    Scholarships
+                </a>
+
+                <a href="{{ url_for('schemes') }}">
+                    Government Schemes
+                </a>
+
+                <a href="{{ url_for('eligibility') }}">
+                    Eligibility Checker
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h6>
+                    Important
+                </h6>
+
+                <p>
+                    Vidyasathi provides information and
+                    official links. Actual applications
+                    should be completed through the
+                    respective official websites.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <p class="footer-bottom">
+            © 2026 Vidyasathi • Scholarship & Government Scheme Information Portal
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

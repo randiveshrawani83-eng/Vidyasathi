@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Admin - Vidyasathi{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+
+            <div>
+                <span class="section-kicker">ADMIN MODULE</span>
+
+                <h1>Administrator Area</h1>
+
+                <p>
+                    Manage scholarship, government scheme and latest-update
+                    information through the Vidyasathi admin panel.
+                </p>
+            </div>
+
+            <!-- Logout Button -->
+            <div>
+                <a href="{{ url_for('admin_logout') }}"
+                   class="btn btn-danger">
+                    Logout
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section-padding">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Manage Scholarships -->
+            <div class="col-md-4">
+
+                <a href="{{ url_for('manage_scholarships') }}"
+                   class="text-decoration-none text-dark">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon blue">
+                            🎓
+                        </div>
+
+                        <h4>Manage Scholarships</h4>
+
+                        <p>
+                            Add, update and remove scholarship information.
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Manage Schemes -->
+            <div class="col-md-4">
+
+                <a href="{{ url_for('manage_schemes') }}"
+                   class="text-decoration-none text-dark">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon green">
+                            🏛️
+                        </div>
+
+                        <h4>Manage Schemes</h4>
+
+                        <p>
+                            Add and remove government scheme information.
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Manage Updates -->
+            <div class="col-md-4">
+
+                <a href="{{ url_for('manage_updates') }}"
+                   class="text-decoration-none text-dark">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon gold">
+                            📢
+                        </div>
+
+                        <h4>Manage Updates</h4>
+
+                        <p>
+                            Add and remove important announcements and updates.
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

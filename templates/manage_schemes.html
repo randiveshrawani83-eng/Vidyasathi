@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1>🏛️ Manage Government Schemes</h1>
+            <p class="text-muted">
+                Add and delete government scheme information.
+            </p>
+        </div>
+
+        <a href="{{ url_for('admin_dashboard') }}"
+           class="btn btn-outline-primary">
+            ← Dashboard
+        </a>
+    </div>
+
+
+    <!-- ADD SCHEME -->
+
+    <div class="card shadow-sm p-4 mb-5">
+
+        <h2 class="mb-4">Add New Government Scheme</h2>
+
+        <form method="POST">
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Scheme Name</label>
+                    <input type="text"
+                           name="name"
+                           class="form-control"
+                           required>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Category</label>
+                    <select name="category"
+                            class="form-select"
+                            required>
+                        <option value="">Select Category</option>
+                        <option value="Education">Education</option>
+                        <option value="Skill Development">Skill Development</option>
+                        <option value="Women">Women</option>
+                        <option value="Employment">Employment</option>
+                        <option value="Welfare">Welfare</option>
+                        <option value="General">General</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea name="description"
+                              class="form-control"
+                              rows="4"
+                              required></textarea>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Eligibility</label>
+                    <textarea name="eligibility"
+                              class="form-control"
+                              rows="4"
+                              required></textarea>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">
+                        Annual Income Limit
+                    </label>
+                    <input type="number"
+                           name="annual_income_limit"
+                           class="form-control">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Deadline</label>
+                    <input type="date"
+                           name="deadline"
+                           class="form-control">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Official Link</label>
+                    <input type="url"
+                           name="official_link"
+                           class="form-control"
+                           placeholder="https://example.com">
+                </div>
+
+            </div>
+
+            <button type="submit"
+                    class="btn btn-primary">
+                ➕ Add Scheme
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- EXISTING SCHEMES -->
+
+    <h2 class="mb-4">Existing Government Schemes</h2>
+
+    {% if schemes %}
+
+        {% for scheme in schemes %}
+
+        <div class="card shadow-sm p-4 mb-3">
+
+            <div class="d-flex justify-content-between">
+
+                <div>
+
+                    <h3>{{ scheme.name }}</h3>
+
+                    <span class="badge bg-primary">
+                        {{ scheme.category }}
+                    </span>
+
+                    <p class="mt-3">
+                        {{ scheme.description }}
+                    </p>
+
+                    <p>
+                        <strong>Eligibility:</strong>
+                        {{ scheme.eligibility }}
+                    </p>
+
+                    <p>
+                        <strong>Income Limit:</strong>
+                        ₹{{ scheme.annual_income_limit }}
+                        |
+                        <strong>Deadline:</strong>
+                        {{ scheme.deadline }}
+                    </p>
+
+                </div>
+
+                <div class="d-flex gap-2">
+
+    <a href="{{ url_for('edit_scheme', scheme_id=scheme.id) }}"
+       class="btn btn-outline-primary">
+        ✏️ Edit
+    </a>
+
+    <a href="{{ url_for('delete_scheme', scheme_id=scheme.id) }}"
+       class="btn btn-outline-danger"
+       onclick="return confirm('Are you sure you want to delete this scheme?');">
+        🗑️ Delete
+    </a>
+
+</div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="alert alert-info">
+            No government schemes available yet.
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

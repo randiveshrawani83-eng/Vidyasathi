@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ item.title }} - Vidyasathi
+{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="section-kicker">
+
+            {% if kind == "scholarship" %}
+                SCHOLARSHIP
+            {% else %}
+                GOVERNMENT SCHEME
+            {% endif %}
+
+        </span>
+
+        <h1>
+            {{ item.title }}
+        </h1>
+
+        <p>
+            {{ item.description }}
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section-padding pt-4">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-8">
+
+                <div class="content-card">
+
+
+                    {% if kind == "scholarship" %}
+
+                    <div class="detail-highlight">
+
+                        <span>
+                            Financial Assistance
+                        </span>
+
+                        <strong>
+                            {{ item.amount }}
+                        </strong>
+
+                    </div>
+
+                    {% else %}
+
+                    <div class="detail-highlight">
+
+                        <span>
+                            Benefits
+                        </span>
+
+                        <strong>
+                            {{ item.benefits }}
+                        </strong>
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <h4 class="mt-4">
+                        Eligibility
+                    </h4>
+
+                    <p>
+                        {{ item.eligibility }}
+                    </p>
+
+
+                    <h4 class="mt-4">
+                        Required Documents
+                    </h4>
+
+                    <p>
+                        {{ item.documents }}
+                    </p>
+
+
+                    <h4 class="mt-4">
+                        Last Date
+                    </h4>
+
+                    <p>
+                        {{ item.deadline }}
+                    </p>
+
+
+                    <div class="alert alert-info mt-4">
+
+                        Always verify the latest information,
+                        eligibility and deadline from the
+                        official source before applying.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="info-panel">
+
+                    <span class="section-kicker">
+                        NEXT STEP
+                    </span>
+
+                    <h4 class="mt-2">
+                        Find more suitable opportunities.
+                    </h4>
+
+                    <p>
+                        Use the Eligibility Checker to discover
+                        matching scholarships and schemes.
+                    </p>
+
+                    <a
+                        href="{{ url_for('eligibility') }}"
+                        class="btn btn-primary w-100">
+
+                        Check Eligibility
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

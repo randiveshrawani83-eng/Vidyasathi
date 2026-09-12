@@ -1,0 +1,336 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section-padding">
+
+    <div class="container">
+
+        <!-- PAGE HEADER -->
+        <div class="text-center mb-5">
+            <div class="eyebrow">SMART DISCOVERY</div>
+
+            <h1 class="display-4 fw-bold">
+                Eligibility Checker
+            </h1>
+
+            <p class="lead text-muted">
+                Enter a few details to discover scholarships that may match your profile.
+            </p>
+        </div>
+
+
+        <!-- ELIGIBILITY FORM -->
+        <div class="card border-0 shadow-sm p-4 mb-5">
+
+            <h2 class="mb-2">
+                Tell us about yourself
+            </h2>
+
+            <p class="text-muted mb-4">
+                Enter the details normally used to determine scholarship eligibility.
+            </p>
+
+
+            <form method="POST" action="{{ url_for('eligibility') }}">
+
+                <div class="row g-4">
+
+                    <!-- CLASS -->
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Class
+                        </label>
+
+                        <select
+                            name="class"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Class
+                            </option>
+
+                            <option value="8th"
+                                {% if student_class == "8th" %}selected{% endif %}>
+                                8th
+                            </option>
+
+                            <option value="9th"
+                                {% if student_class == "9th" %}selected{% endif %}>
+                                9th
+                            </option>
+
+                            <option value="10th"
+                                {% if student_class == "10th" %}selected{% endif %}>
+                                10th
+                            </option>
+
+                            <option value="11th"
+                                {% if student_class == "11th" %}selected{% endif %}>
+                                11th
+                            </option>
+
+                            <option value="12th"
+                                {% if student_class == "12th" %}selected{% endif %}>
+                                12th
+                            </option>
+
+                            <option value="UG"
+                                {% if student_class == "UG" %}selected{% endif %}>
+                                UG
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- GENDER -->
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Gender
+                        </label>
+
+                        <select
+                            name="gender"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="Male"
+                                {% if gender == "Male" %}selected{% endif %}>
+                                Male
+                            </option>
+
+                            <option value="Female"
+                                {% if gender == "Female" %}selected{% endif %}>
+                                Female
+                            </option>
+
+                            <option value="Other"
+                                {% if gender == "Other" %}selected{% endif %}>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Category
+                        </label>
+
+                        <select
+                            name="category"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="Merit"
+                                {% if category == "Merit" %}selected{% endif %}>
+                                Merit
+                            </option>
+
+                            <option value="Girls"
+                                {% if category == "Girls" %}selected{% endif %}>
+                                Girls
+                            </option>
+
+                            <option value="OBC"
+                                {% if category == "OBC" %}selected{% endif %}>
+                                OBC
+                            </option>
+
+                            <option value="SC"
+                                {% if category == "SC" %}selected{% endif %}>
+                                SC
+                            </option>
+
+                            <option value="ST"
+                                {% if category == "ST" %}selected{% endif %}>
+                                ST
+                            </option>
+
+                            <option value="General"
+                                {% if category == "General" %}selected{% endif %}>
+                                General
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- INCOME -->
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Annual Family Income
+                        </label>
+
+                        <input
+                            type="number"
+                            name="annual_income"
+                            class="form-control"
+                            placeholder="Example: 250000"
+                            value="{{ annual_income }}"
+                            min="0"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="mt-4">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary btn-lg"
+                    >
+                        Check My Eligibility →
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+        {% if message %}
+
+        <div class="alert alert-info shadow-sm">
+
+            {{ message }}
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- RESULTS -->
+        {% if results %}
+
+        <div class="mt-4">
+
+            <h2 class="mb-4">
+                🎓 Matching Scholarships
+            </h2>
+
+
+            <div class="row g-4">
+
+                {% for item in results %}
+
+                <div class="col-md-6">
+
+                    <div class="card h-100 border-0 shadow-sm p-4">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <span class="badge bg-primary">
+                                {{ item.category }}
+                            </span>
+
+                            {% if item.amount %}
+                            <span class="badge bg-warning text-dark">
+                                {{ item.amount }}
+                            </span>
+                            {% endif %}
+
+                        </div>
+
+
+                        <h3>
+                            {{ item.name }}
+                        </h3>
+
+
+                        {% if item.description %}
+
+                        <p class="text-muted">
+                            {{ item.description }}
+                        </p>
+
+                        {% endif %}
+
+
+                        {% if item.eligibility %}
+
+                        <p>
+                            <strong>Eligibility:</strong><br>
+                            {{ item.eligibility }}
+                        </p>
+
+                        {% endif %}
+
+
+                        {% if item.annual_income_limit %}
+
+                        <p>
+                            <strong>Income Limit:</strong>
+                            ₹{{ item.annual_income_limit }}
+                        </p>
+
+                        {% endif %}
+
+
+                        {% if item.deadline %}
+
+                        <p>
+                            <strong>Deadline:</strong>
+                            {{ item.deadline }}
+                        </p>
+
+                        {% endif %}
+
+
+                        {% if item.official_link %}
+
+                        <a
+                            href="{{ item.official_link }}"
+                            target="_blank"
+                            class="btn btn-outline-primary"
+                        >
+                            Official Details
+                        </a>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}
