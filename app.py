@@ -10,15 +10,16 @@ app.secret_key = "vidyasathi-secret-key-2026"
 # MYSQL CONNECTION
 # ---------------------------------------------------------
 
+import os
+
 def get_db_connection():
     return mysql.connector.connect(
-        host="localhost",
-        port=3306,
-        user="root",
-        password="VidyasathiNew@2026",
-        database="vidyasathi_db"
+        host=os.environ.get("MYSQLHOST", "localhost"),
+        port=int(os.environ.get("MYSQLPORT", 3306)),
+        user=os.environ.get("MYSQLUSER", "root"),
+        password=os.environ.get("MYSQLPASSWORD", ""),
+        database=os.environ.get("MYSQLDATABASE", "vidyasathi_db")
     )
-
 
 # ---------------------------------------------------------
 # HOME PAGE
